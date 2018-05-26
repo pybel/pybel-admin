@@ -2,8 +2,16 @@
 
 """PyBEL-Admin command line interface.
 
-Run ``pybel-admin`` from the command line to start the Flask Admin view over the PyBEL database. Optionally,
-the host and port can be specified.
+PyBEL-Admin installs a command ``pybel-admin`` that can be directly called from the console. Alternatively, it can
+be run as a Python module with:
+
+.. code-block:: sh
+
+    $ python3 -m pybel_admin
+
+The options ``--host`` and ``--port`` can be used to change these default parameters from ``localhost`` and ``5000``,
+respectively.
+
 """
 
 import sys

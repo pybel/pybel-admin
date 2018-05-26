@@ -24,7 +24,7 @@ Clone the repository from `GitHub <https://github.com/pybel/pybel-admin>`_ and i
 
 Citation
 --------
-If you use PyBEL in your work, please cite:
+If you use PyBEL in your work, please cite [1]_:
 
 .. [1] Hoyt, C. T., *et al.* (2017). `PyBEL: a Computational Framework for Biological Expression Language
        <https://doi.org/10.1093/bioinformatics/btx660>`_. Bioinformatics, 34(December), 1–2.
