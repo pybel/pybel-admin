@@ -50,8 +50,8 @@ If you use PyBEL in your work, please cite:
     :target: https://codecov.io/gh/pybel/pybel-admin?branch=master
     :alt: Coverage Status
 
-.. |documentation| image:: https://readthedocs.org/projects/mirtarbase/badge/?version=latest
-    :target: http://mirtarbase.readthedocs.io
+.. |documentation| image:: https://readthedocs.org/projects/pybel-admin/badge/?version=latest
+    :target: https://pybel.readthedocs.io/projects/admin/en/latest/?badge=latest
     :alt: Documentation Status
 
 .. |climate| image:: https://codeclimate.com/github/pybel/pybel-admin/badges/gpa.svg
