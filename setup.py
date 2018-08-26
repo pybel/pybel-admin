@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Setup.py for PyBEL-Admin."""
+"""Setup.py for PyBEL-Flask-Admin."""
 
 import codecs
 import os
@@ -26,7 +26,7 @@ CLASSIFIERS = [
     'Topic :: Scientific/Engineering :: Bio-Informatics'
 ]
 INSTALL_REQUIRES = [
-    'pybel',
+    'pybel>=0.12.0',
     'click',
     'flask',
     'flask-admin',
@@ -63,7 +63,7 @@ def find_meta(meta):
     )
     if meta_match:
         return meta_match.group(1)
-    raise RuntimeError('Unable to find __{meta}__ string'.format(meta=meta))
+    raise RuntimeError(f'Unable to find __{meta}__ string')
 
 
 def get_long_description():

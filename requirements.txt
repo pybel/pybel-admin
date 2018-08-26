@@ -1,4 +1,5 @@
-pybel
+pybel>=0.12.0
 flask
 flask_admin
+flask_security
 click
