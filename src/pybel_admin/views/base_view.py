@@ -7,7 +7,6 @@ from typing import Type
 
 from flask import redirect, request
 from flask_admin.contrib.sqla import ModelView as BaseModelView
-from flask_security import current_user, url_for_security
 
 __all__ = [
     'ModelView',
@@ -19,6 +18,8 @@ PYBEL_WEB_ADMIN_USE_SECURITY = os.environ.get('PYBEL_WEB_ADMIN_USE_SECURITY', Fa
 def _patch_model_view() -> Type[BaseModelView]:
     if not PYBEL_WEB_ADMIN_USE_SECURITY:
         return BaseModelView
+
+    from flask_security import current_user, url_for_security
 
     # redefine model view to have some more stuff in it
     class SecureModelView(BaseModelView):
