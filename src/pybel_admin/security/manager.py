@@ -3,8 +3,9 @@
 """Manager for PyBEL-Flask-Security."""
 
 from flask_security import SQLAlchemyUserDatastore
-from pybel.manager.cache_manager import Manager
 
+from pybel import Manager
+from pybel.manager.models import Base
 from .models import Role, User
 
 __all__ = [
@@ -18,7 +19,8 @@ class SecurityManager(Manager, SQLAlchemyUserDatastore):
     def __init__(self, connection=None, engine=None, session=None, user_model=User, role_model=Role):
         super(Manager, self).__init__(connection=connection, engine=engine, session=session)
 
-        self.bind()
+        Base.metadata.bind = self.engine
+        Base.query = self.session.query_property()
 
         SQLAlchemyUserDatastore.__init__(self, db=self, user_model=user_model, role_model=role_model)
 
