@@ -18,7 +18,7 @@ class TestAdmin(TemporaryCacheMixin):
         """Set up a test application and client."""
         super(TestAdmin, self).setUp()
 
-        self.app = create_app(connection=self.manager)
+        self.app = create_app(manager=self.manager)
         self.client = self.app.test_client()
 
     def test_find_network(self):

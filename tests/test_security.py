@@ -11,7 +11,7 @@ class TestSecurity(TemporaryCacheMixin):
     def setUp(self):
         """Set up this class with a security manager."""
         super().setUp()
-        self.manager = SecurityManager.from_connection(self.connection)
+        self.manager = SecurityManager(connection=self.connection)
 
     def test_one(self):
         """Test proper integration of the user datastore."""

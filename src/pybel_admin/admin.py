@@ -38,6 +38,8 @@ def _add_views(admin: Admin, session):
 def build_admin_service(app: Flask, manager: Manager, url: str = '/') -> Admin:
     """Add a Flask-Admin database front-end to a Flask app.
 
+    :param app:
+    :param manager:
     :param url: The url prefix of the service
     """
     admin = Admin(app, template_mode='bootstrap3', url=url)

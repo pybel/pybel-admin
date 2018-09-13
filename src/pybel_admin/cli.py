@@ -28,7 +28,7 @@ from .application import create_app
 @click.option('-p', '--port', type=int)
 def main(connection, host, port):
     """Run PyBEL Flask Admin."""
-    app = create_app(connection=connection)
+    app = create_app(manager=connection)
     app.run(host=host, port=port)
 
 

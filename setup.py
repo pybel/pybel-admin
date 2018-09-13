@@ -26,7 +26,7 @@ CLASSIFIERS = [
     'Topic :: Scientific/Engineering :: Bio-Informatics'
 ]
 INSTALL_REQUIRES = [
-    'pybel>=0.12.0',
+    'pybel',
     'click',
     'flask',
     'flask-admin',
@@ -36,7 +36,9 @@ EXTRAS_REQUIRE = {
         'flask-security',
     ]
 }
-TESTS_REQUIRE = []
+TESTS_REQUIRE = [
+    'flask-security',
+]
 ENTRY_POINTS = {
     'console_scripts': [
         'pybel-admin = pybel_admin.cli:main',

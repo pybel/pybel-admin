@@ -2,23 +2,27 @@
 
 """Functions for creating the PyBEL-Admin Flask app."""
 
-import flask
-
-from pybel import Manager
-from .admin import build_admin_service
 from typing import Optional
+
+from flask import Flask
+from pybel import Manager
+
+from .admin import build_admin_service
+
 __all__ = [
     'create_app',
 ]
 
 
-def create_app(connection:Optional[str]=None):
+def create_app(manager: Optional[Manager] = None) -> Flask:
     """Create a Flask app.
 
-    :param connection: Either a connection string or PyBEL manager.
-    :rtype: flask.Flask
+    :param manager: Either a connection string or PyBEL manager.
     """
-    app = flask.Flask(__name__)
-    manager = Manager(connection=connection)
+    app = Flask(__name__)
+
+    if manager is None:
+        manager = Manager()
+
     build_admin_service(app, manager)
     return app
