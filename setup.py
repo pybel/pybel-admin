@@ -19,10 +19,9 @@ CLASSIFIERS = [
     'License :: OSI Approved :: MIT License',
     'Operating System :: OS Independent',
     'Programming Language :: Python',
-    'Programming Language :: Python :: 2.7',
-    'Programming Language :: Python :: 3.4',
-    'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3 :: Only',
     'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
     'Topic :: Scientific/Engineering :: Bio-Informatics'
 ]
 INSTALL_REQUIRES = [
@@ -34,6 +33,11 @@ INSTALL_REQUIRES = [
 EXTRAS_REQUIRE = {
     'security': [
         'flask-security',
+    ],
+    'docs': [
+        'sphinx',
+        'sphinx-rtd-theme',
+        'sphinx-click',
     ]
 }
 TESTS_REQUIRE = [
@@ -95,4 +99,5 @@ if __name__ == '__main__':
         extras_require=EXTRAS_REQUIRE,
         tests_require=TESTS_REQUIRE,
         entry_points=ENTRY_POINTS,
+        zip_safe=False,
     )

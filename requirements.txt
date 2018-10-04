@@ -1,5 +1,0 @@
-pybel
-flask
-flask_admin
-flask_security
-click

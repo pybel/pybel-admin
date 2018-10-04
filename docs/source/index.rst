@@ -4,7 +4,9 @@ PyBEL-Admin Documentation
 
 Command Line Interface Usage
 ----------------------------
-.. automodule:: pybel_admin.cli
+.. click:: pybel_admin.cli:main
+   :prog: pybel-admin
+   :show-nested:
 
 Indices and tables
 ==================

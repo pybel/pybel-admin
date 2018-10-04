@@ -14,7 +14,8 @@ Download the most recent code from `GitHub <https://github.com/pybel/pybel-admin
 
 For Developers
 ~~~~~~~~~~~~~~
-Clone the repository from `GitHub <https://github.com/pybel/pybel-admin>`_ and install in editable mode with:
+Clone the repository from `GitHub <https://github.com/pybel/pybel-admin>`_
+and install in editable mode with:
 
 .. code-block:: sh
 
@@ -24,15 +25,16 @@ Clone the repository from `GitHub <https://github.com/pybel/pybel-admin>`_ and i
 
 Getting Started
 ---------------
-PyBEL-Admin installs a command ``pybel-admin`` that can be directly called from the console. Alternatively, it can
+PyBEL-Admin installs a command ``pybel-admin`` that can be directly called
+from the console. Alternatively, it can
 be run as a Python module with:
 
 .. code-block:: sh
 
     $ python3 -m pybel_admin
 
-The options ``--host`` and ``--port`` can be used to change these default parameters from ``localhost`` and ``5000``,
-respectively.
+The options ``--host`` and ``--port`` can be used to change these default
+parameters from ``localhost`` and ``5000``, respectively.
 
 Citation
 --------

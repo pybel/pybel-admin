@@ -5,8 +5,8 @@
 from typing import Optional
 
 from flask import Flask
-from pybel import Manager
 
+from pybel import Manager
 from .admin import build_admin_service
 
 __all__ = [

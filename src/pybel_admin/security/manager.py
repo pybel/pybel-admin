@@ -16,7 +16,7 @@ __all__ = [
 class SecurityManager(Manager, SQLAlchemyUserDatastore):
     """A wrapper around the PyBEL manager and :class:`flask_security.SQLAlchemyUserDatastore`."""
 
-    def __init__(self, connection=None, engine=None, session=None, user_model=User, role_model=Role):
+    def __init__(self, connection=None, engine=None, session=None, user_model=User, role_model=Role):  # noqa: D107
         super(Manager, self).__init__(connection=connection, engine=engine, session=session)
 
         Base.metadata.bind = self.engine

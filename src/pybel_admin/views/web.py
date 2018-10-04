@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+"""Views for PyBEL-Web."""
+
 from .base_view import ModelView
 
 __all__ = [
